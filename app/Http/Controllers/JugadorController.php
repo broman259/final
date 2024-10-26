@@ -52,8 +52,7 @@ class JugadorController extends Controller
         if($imagen = $request->file('imagen')){
             $rutaGuardarImg = 'imagen/';
             $imagenJugador = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
-            // $imagen->move(public_path($rutaGuardarImg), $imagenJugador);
-            $imagen->storeAs($rutaGuardarImg, $imagenJugador, 'public');
+            $imagen->move(public_path($rutaGuardarImg), $imagenJugador);
             $jugador['imagen'] = $imagenJugador;
         }
 

@@ -75,7 +75,7 @@
 
                                         <td class="p-4 border-b border-slate-200">
                                             <div class="flex items-center gap-3">
-                                                <img src="{{ asset('storage/app/imagen/'. $equipo->imagen) }}"
+                                                <img src="{{ asset('storage/imagen/'. $equipo->imagen) }}"
                                                     class="relative inline-block h-9 w-9 !rounded-full object-cover object-center" />
                                                 <div class="flex flex-col">
                                                     <p class="text-sm font-semibold text-slate-700">
