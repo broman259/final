@@ -46,8 +46,8 @@ class EquipoController extends Controller
         if($imagen = $request->file('imagen')){
             $rutaGuardarImg = 'imagen/';
             $imagenEquipo = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
-            // $imagen->move(public_path($rutaGuardarImg), $imagenEquipo);
-            $imagen->storeAs($rutaGuardarImg, $imagenEquipo, 'public');
+            $imagen->move(public_path($rutaGuardarImg), $imagenEquipo);
+            // $imagen->storeAs($rutaGuardarImg, $imagenEquipo, 'public');
             $equipo['imagen'] = $imagenEquipo;
         }
             
